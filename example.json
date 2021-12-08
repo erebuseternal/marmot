@@ -1,0 +1,23 @@
+{
+    "config": {
+      "source_path": "example_data/gpLimpopo_depr_12102021.shp",
+      "features_dir": "example_features",
+      "targets_dir": "example_targets",
+      "target_id": "ellipticalness",
+      "minimum_to_train": 3,
+      "queries_per_round": 5,
+      "test_train_split": 0.25
+    },
+    "broker": "marmot.brokers.ShapeFileBroker",
+    "features": [
+      {
+        "path": "marmot.features.LogMeanNormalizedEllipseResiduals",
+        "override": false
+      }
+    ],
+    "interface": "marmot.interfaces.ShapeInterface",
+    "learner": {
+      "factory": "marmot.learners.random_forest_learner_factory",
+      "query_method": "margin_sampling"
+    }
+}

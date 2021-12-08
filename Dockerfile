@@ -21,3 +21,4 @@ RUN apt-get -y install git vim curl
 RUN apt-get install -y libgdal-dev
 RUN pip install geopandas seaborn tqdm click
 RUN pip install scikit-image
+RUN pip install modAL
