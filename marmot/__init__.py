@@ -32,7 +32,7 @@ def marmot(config):
     if not os.path.exists(config['config']['features_dir']):
         os.mkdir(config['config']['features_dir'])
     feature_builders = [
-        import_object(feature['path'])(override=feature.get('override', False), **config['config'])
+        import_object(feature['path'])(**{**config['config'], **feature})
         for feature in config['features']
     ]
     features_dfs = []

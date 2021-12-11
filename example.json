@@ -13,6 +13,11 @@
       {
         "path": "marmot.features.LogMeanNormalizedEllipseResiduals",
         "override": false
+      },
+      {
+        "path": "marmot.features.DistanceWeightedConvexity",
+        "override": false,
+        "segment_length": 10
       }
     ],
     "interface": "marmot.interfaces.ShapeInterface",
